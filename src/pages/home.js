@@ -53,7 +53,6 @@ const Home = () => {
             return alert('Please type in your search word or phrase');
         }
 
-        ///////////////////// TO HAVE LOADER SLOTTED IN HERE ///////////////////////
         setIsLoading(true);
 
         ////////////// IF NOTHING CAME FROM THE DATABASE TO STORE, I.E DB IS EMPTY /////////////
