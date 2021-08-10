@@ -38,11 +38,13 @@ const Header = ({ selectedValue, handleSubmit, handleChange }) => {
                     style={{ width: '400px' }}
                     onSubmit={handleSubmit}
                 >
+
                     <FormControl
                         type="search"
                         placeholder="Type search here"
                         className="mr-5"
                         aria-label="Search"
+                        autoComplete="off"
                         name="searchInputValue"
                         onChange={handleChange}
                         style={{ fontSize: '18px' }}

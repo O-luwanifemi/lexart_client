@@ -13,7 +13,7 @@ const Card = ({ name, description, price, imgSrc, category, source }) => {
                         </div>
                     </Col>
 
-                    <Col className="column">
+                    <Col className="column text_column">
                         <h3>{name}</h3>
                         <p>{description}</p>
                         <h1>{price}</h1>
