@@ -1,8 +1,8 @@
 import axios from 'axios';
-// import { config } from '../../config';
+import { config } from '../../config';
 import * as actionStates from '../constants/actionState';
 
-// const { BASEURL } = config;
+const { BASEURL } = config;
 const {
     GETPRODUCTS_LOADING,
     GETPRODUCTS_FAILURE,
@@ -44,7 +44,7 @@ export const getProductsAsync = () => async dispatch => {
     try {
         dispatch(getProductsLoading());
 
-        const response = await axios.get(`http://localhost:8500`);
+        const response = await axios.get(BASEURL);
 
         dispatch(getProductsSuccess(response.data.data.products));
     } catch (error) {
@@ -55,7 +55,7 @@ export const getProductsAsync = () => async dispatch => {
 export const saveProductsAsync = payload => async dispatch => {
     try {
         dispatch(saveProductsLoading());
-        const response = await axios.post('http://localhost:8500', payload);
+        const response = await axios.post(BASEURL, payload);
 
         if (!Object.keys(response.data.data).length) {
             return dispatch(saveProductsFailure(response.data.data.message));

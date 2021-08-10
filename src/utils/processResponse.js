@@ -32,6 +32,7 @@ const processResponse = async (
                 return setSearchedProducts([...payload]);
             }
 
+            setSearchedProducts([]);
             return alert('Oops! Nothing found. Try another search.');
         }
 
